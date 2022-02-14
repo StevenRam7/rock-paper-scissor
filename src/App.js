@@ -1,4 +1,5 @@
 import "./App.css";
+import pic from "./rock-paper-scissors.jpg";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <button>PAPER</button>
         <button>SCISSORS</button>
       </div>
+      <img src={pic} alt="rock paper and scissors" />
     </div>
   );
 }
