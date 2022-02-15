@@ -38,3 +38,13 @@ img {
   width: 513px;
   height: 337px;;
 }
+
+.versus {
+  column-count: 2;
+  text-align: center;
+  height: 80px;
+}
+
+.column2 {
+  
+}
