@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useState, useHistory } from "react";
 import "./App.css";
 import pic from "./rock-paper-scissors.jpg";
 
 function App() {
   const [selection, setSelection] = useState(null);
+  const history = useHistory();
 
   const generateRandom = () => {
     //generate computer's selection
+  }
+
+  const winText = () => {
+    //add text noting the winner
   }
 
   return (
@@ -26,10 +31,13 @@ function App() {
         <div className="versus-view">
           <h1>Versus!</h1>
           <div className="versus">
-            <h2>Your choice: {selection}</h2>
-            {/* columns are uneven* */}
-            <h2 className="column2">Computer's choice: X</h2>
+            <h2 className="column">Your choice: <span>{selection}</span></h2>
+            <h2 className="column">Computer's choice: <span>X</span></h2>
           </div>
+          <div className="final">
+            {winText}
+            <button onClick={history.goBack()}>Play Again!</button>
+            </div>
         </div>
       )}
     </div>

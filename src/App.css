@@ -39,12 +39,29 @@ img {
   height: 337px;;
 }
 
-.versus {
-  column-count: 2;
-  text-align: center;
-  height: 80px;
+h2 {
+  color: white;
 }
 
-.column2 {
-  
+.versus {
+  column-count: 2;
+  /* text-align: center;
+  height: 80px; */
+  display: flex;
+}
+
+.column {
+  margin-left: 80px;
+  margin-right: 80px;
+  border: solid;
+  border-radius: 50px;
+  border-color: white;
+  padding: 50px;
+}
+
+span {
+  color: darkred;
+  font-weight: bolder;
+  font-size: 40px;
+  font-style: oblique;
 }
