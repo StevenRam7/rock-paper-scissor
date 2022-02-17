@@ -1,10 +1,12 @@
-import { useState, useHistory } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./App.css";
 import pic from "./rock-paper-scissors.jpg";
 
 function App() {
   const [selection, setSelection] = useState(null);
-  const history = useHistory();
+  //const navigate = useNavigate();
+ 
 
   const generateRandom = () => {
     //generate computer's selection
@@ -13,6 +15,11 @@ function App() {
   const winText = () => {
     //add text noting the winner
   }
+
+//   function handleSubmit(e) {
+//     e.preventDefault();
+//     navigate('/');
+// }
 
   return (
     <div className="select-view">
@@ -36,7 +43,8 @@ function App() {
           </div>
           <div className="final">
             {winText}
-            <button onClick={history.goBack()}>Play Again!</button>
+           <button>Play Again!</button>
+                      
             </div>
         </div>
       )}
