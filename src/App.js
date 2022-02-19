@@ -4,6 +4,8 @@ import "./App.css";
 import pic from "./rock-paper-scissors.jpg";
 
 function App() {
+  //reorganize files and create routes
+  
   const [selection, setSelection] = useState(null);
   //const navigate = useNavigate();
  
