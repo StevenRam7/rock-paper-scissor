@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import pic from "./rock-paper-scissors.jpg";
+import { Context } from "./App";
 
 function StartPage() {
-
-    const [selection, setSelection] = useState(null);
+    const {setSelection} = useContext(Context);
     const navigate = useNavigate();
     function handleClick(option) {
         console.log(option)
