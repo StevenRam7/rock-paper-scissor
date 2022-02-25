@@ -1,16 +1,21 @@
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Context } from "./App";
 
 function VersusPage() {
   const { selection } = useContext(Context);
-  console.log(selection)
+  const [random, setRandom] = useState(null);
+  //console.log(selection)
   const navigate = useNavigate();
   const generateRandom = () => {
     //generate computer's selection
   };
   const finalText = () => {
-    //add text noting the winner
+    if (random === selection) {
+        let winner = "IT'S A TIE!"
+        return winner;
+    }
+    //add cases
   };
 
   return (
@@ -26,7 +31,7 @@ function VersusPage() {
       </div>
       <div className="final">
         {finalText}
-        <button onClick={() => navigate("/")}>Play Again!</button>
+        <button className="play-again" onClick={() => navigate("/")}>Play Again!</button>
       </div>
     </div>
   );
