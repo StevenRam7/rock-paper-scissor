@@ -7,7 +7,7 @@ function StartPage() {
     const {setSelection} = useContext(Context);
     const navigate = useNavigate();
     function handleClick(option) {
-        console.log(option)
+        //console.log(option)
         setSelection(option)
         navigate("/versus")
     }
