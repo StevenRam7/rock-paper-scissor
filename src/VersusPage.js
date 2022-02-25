@@ -14,11 +14,27 @@ function VersusPage() {
   }
 
   function finalText() {
-    if (random === selection) {
-      let winner = "IT'S A TIE!";
-      return winner;
+    let result;
+   switch(selection + random) {
+        case "RockScissors":
+        case "ScissorsPaper":
+        case "PaperRock":
+            result = "YOU WIN!"
+            break
+        case "RockPaper":
+        case "PaperScissors":
+        case "ScissorsRock":
+            result = "YOU LOSE!"
+            break
+        case "RockRock":
+        case "ScissorsScissors":
+        case "PaperPaper":
+            result = "IT'S A TIE!"
+            break
+        default:
+            result = null;
     }
-    //add cases
+    return result;
   }
 
   useEffect(() => {

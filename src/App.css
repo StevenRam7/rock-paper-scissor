@@ -67,9 +67,13 @@ span {
 }
 
 .play-again {
-  text-align: center;
+  /* margin-left: 300px;
+  margin-right: 300px; */
+  display: column;
 }
 
 .final-text {
   text-align: center;
+  color: white;
+  font-size: 20px;
 }
