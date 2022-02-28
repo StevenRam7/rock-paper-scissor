@@ -5,7 +5,6 @@ import { Context } from "./App";
 function VersusPage() {
   const { selection } = useContext(Context);
   const [random, setRandom] = useState(null);
-  //console.log(selection)
   const navigate = useNavigate();
   function generateRandom() {
     const options = ["Rock", "Paper", "Scissors"];
@@ -15,30 +14,30 @@ function VersusPage() {
 
   function finalText() {
     let result;
-   switch(selection + random) {
-        case "RockScissors":
-        case "ScissorsPaper":
-        case "PaperRock":
-            result = "YOU WIN!!"
-            break
-        case "RockPaper":
-        case "PaperScissors":
-        case "ScissorsRock":
-            result = "YOU LOSE!!"
-            break
-        case "RockRock":
-        case "ScissorsScissors":
-        case "PaperPaper":
-            result = "IT'S A TIE!!"
-            break
-        default:
-            result = null;
+    switch (selection + random) {
+      case "RockScissors":
+      case "ScissorsPaper":
+      case "PaperRock":
+        result = "YOU WIN!!";
+        break;
+      case "RockPaper":
+      case "PaperScissors":
+      case "ScissorsRock":
+        result = "YOU LOSE!!";
+        break;
+      case "RockRock":
+      case "ScissorsScissors":
+      case "PaperPaper":
+        result = "IT'S A TIE!!";
+        break;
+      default:
+        result = null;
     }
     return result;
   }
 
   useEffect(() => {
-      generateRandom()
+    generateRandom();
   }, [selection]);
 
   return (
@@ -53,13 +52,9 @@ function VersusPage() {
         </h2>
       </div>
       <div className="final">
-          <div className="final-text">
-            {finalText()}  
-          </div>
-        
-        <button onClick={() => navigate("/")}>
-          Play Again!
-        </button>
+        <div className="final-text">{finalText()}</div>
+
+        <button onClick={() => navigate("/")}>Play Again!</button>
       </div>
     </div>
   );

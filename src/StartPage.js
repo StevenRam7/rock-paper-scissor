@@ -4,28 +4,38 @@ import pic from "./rock-paper-scissors.jpg";
 import { Context } from "./App";
 
 function StartPage() {
-    const {setSelection} = useContext(Context);
-    const navigate = useNavigate();
-    function handleClick(option) {
-        //console.log(option)
-        setSelection(option)
-        navigate("/versus")
-    }
+  const { setSelection } = useContext(Context);
+  const navigate = useNavigate();
+  function handleClick(option) {
+    setSelection(option);
+    navigate("/versus");
+  }
 
-    return (
-        <div className="start-page">
-         <div>
-           <h1>Pick One!</h1>
-          <div className="options">
-             <button className="option-button" onClick={() => handleClick("Rock")}>ROCK</button>
-             <button className="option-button" onClick={() => handleClick("Paper")}>PAPER</button>
-             <button className="option-button" onClick={() => handleClick("Scissors")}>SCISSORS</button>
-           </div>
-           <img src={pic} alt="rock paper and scissors" />
-         </div>
-      
+  return (
+    <div className="start-page">
+      <div>
+        <h1>Pick One!</h1>
+        <div className="options">
+          <button className="option-button" onClick={() => handleClick("Rock")}>
+            ROCK
+          </button>
+          <button
+            className="option-button"
+            onClick={() => handleClick("Paper")}
+          >
+            PAPER
+          </button>
+          <button
+            className="option-button"
+            onClick={() => handleClick("Scissors")}
+          >
+            SCISSORS
+          </button>
         </div>
-    )
+        <img src={pic} alt="rock paper and scissors" />
+      </div>
+    </div>
+  );
 }
 
 export default StartPage;
