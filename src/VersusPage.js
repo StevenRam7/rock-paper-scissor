@@ -19,17 +19,17 @@ function VersusPage() {
         case "RockScissors":
         case "ScissorsPaper":
         case "PaperRock":
-            result = "YOU WIN!"
+            result = "YOU WIN!!"
             break
         case "RockPaper":
         case "PaperScissors":
         case "ScissorsRock":
-            result = "YOU LOSE!"
+            result = "YOU LOSE!!"
             break
         case "RockRock":
         case "ScissorsScissors":
         case "PaperPaper":
-            result = "IT'S A TIE!"
+            result = "IT'S A TIE!!"
             break
         default:
             result = null;
@@ -57,7 +57,7 @@ function VersusPage() {
             {finalText()}  
           </div>
         
-        <button className="play-again" onClick={() => navigate("/")}>
+        <button onClick={() => navigate("/")}>
           Play Again!
         </button>
       </div>

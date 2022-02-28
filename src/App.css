@@ -45,18 +45,18 @@ h2 {
 
 .versus {
   column-count: 2;
-  /* text-align: center;
-  height: 80px; */
   display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .column {
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 25%;
+  margin-right: 25%;
   border: solid;
   border-radius: 50px;
   border-color: white;
-  padding: 50px;
+  padding: 40px;
 }
 
 span {
@@ -66,14 +66,12 @@ span {
   font-style: oblique;
 }
 
-.play-again {
-  /* margin-left: 300px;
-  margin-right: 300px; */
-  display: column;
+.final {
+  text-align: center;
 }
 
 .final-text {
-  text-align: center;
   color: white;
-  font-size: 20px;
+  font-size: 32px;
+  font-weight: bolder;
 }

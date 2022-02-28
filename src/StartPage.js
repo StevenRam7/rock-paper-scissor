@@ -17,9 +17,9 @@ function StartPage() {
          <div>
            <h1>Pick One!</h1>
           <div className="options">
-             <button onClick={() => handleClick("Rock")}>ROCK</button>
-             <button onClick={() => handleClick("Paper")}>PAPER</button>
-             <button onClick={() => handleClick("Scissors")}>SCISSORS</button>
+             <button className="option-button" onClick={() => handleClick("Rock")}>ROCK</button>
+             <button className="option-button" onClick={() => handleClick("Paper")}>PAPER</button>
+             <button className="option-button" onClick={() => handleClick("Scissors")}>SCISSORS</button>
            </div>
            <img src={pic} alt="rock paper and scissors" />
          </div>
