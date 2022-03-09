@@ -52,7 +52,7 @@ function VersusPage() {
         </h2>
       </div>
       <div className="final">
-        <div className="final-text">{finalText()}</div>
+        <div id="final-text">{finalText()}</div>
 
         <button onClick={() => navigate("/")}>Play Again!</button>
       </div>
