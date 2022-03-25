@@ -8,7 +8,7 @@ h1 {
   font-size: 40px;
   background-color: darkred;
   margin-top: 0;
-  padding: 20px;
+  padding: 0.5em;
   color: rgb(224, 222, 222);
 }
 
@@ -23,6 +23,7 @@ button {
   font-size: 30px;
   margin: 20px;
   padding: 30px;
+  transition: 0.5s ease;
 }
 
 button:hover {
@@ -37,6 +38,18 @@ img {
   margin: auto;
   width: 513px;
   height: 337px;;
+}
+
+@media all and (max-width: 512px) {
+  img {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 300px) {
+  img {
+    display: none;
+  }
 }
 
 h2 {
