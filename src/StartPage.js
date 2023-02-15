@@ -14,7 +14,7 @@ function StartPage() {
   return (
     <div className="start-page">
       <div>
-        <h1>Select One!</h1>
+        <h1>Pick One!</h1>
         <div className="options">
           <button className="option-button" onClick={() => handleClick("Rock")}>
             ROCK
